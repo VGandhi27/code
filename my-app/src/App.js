@@ -1,13 +1,29 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import SignIn from './components/screens/SignIn';
-import SignUp from './components/screens/SignUp';
-function App() {
+import SignIn from './routes/SignIn';
+import SignUp from './routes/SignUp';
+import Home from './routes/Home';
+
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+
+
+const App=()=> {
+
+
   return (
     <>
-    <Navbar/>
-    <SignIn/>
-    <SignUp/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<><Home /></>}/>
+        {/* <Route index element={<><Home  /></>} /> */}
+        <Route path="/home" element={<><Home  /></>} />
+        <Route path="/signin" element={<SignIn   />} />
+        <Route path="/signup" element={<SignUp />} />
+        
+      
+    </Routes>
+  </BrowserRouter>
+
     </>
   );
 }

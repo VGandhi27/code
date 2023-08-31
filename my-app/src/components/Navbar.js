@@ -6,11 +6,15 @@ const Navbar = () => {
     <div>
       <nav>
     <div className="nav-wrapper white">
-      <a href="#" className="brand-logo left">Bank_System</a>
+      <Link to="/" className="brand-logo left">Bank_System</Link>
       <ul id="nav-mobile" className="right">
 
-      <li><a href="/">Signin</a></li>,
-      <li><a href="/">SignUp</a></li>,
+      <li>
+        <Link to ="/signin">Signin</Link>
+      </li>,
+      <li>
+        <Link to="/signup">SignUp</Link>
+      </li>,
       
       </ul>
     </div>

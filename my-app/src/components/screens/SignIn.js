@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import { Link} from 'react-router-dom';
 const SignIn = () => {
   return (
     <div className="mycard">
@@ -15,7 +15,7 @@ const SignIn = () => {
        onClick=""
        >SignIn
        </button>
-       <h5><a href="/signup">Don't have an Account ?</a></h5>
+       <h5><Link to="/signup">Don't have an Account ?</Link></h5>
 
      </div>
 
